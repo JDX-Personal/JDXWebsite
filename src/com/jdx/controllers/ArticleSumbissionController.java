@@ -38,14 +38,14 @@ public class ArticleSumbissionController extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		System.out.println("HERE!!!!!");
+		System.out.println("WTF!!!!!");
 		String pageName = request.getParameter("pageName");
 		String title = request.getParameter("title");
 		String overview = request.getParameter("overview");
 		HttpSession session = request.getSession(true);
 		try{
-			ArticleDAO articleDAO = new ArticleDAO();
-			articleDAO.addArticle(pageName, title, overview);
+			//ArticleDAO articleDAO = new ArticleDAO();
+			//articleDAO.addArticle(pageName, title, overview);
 		}catch(Exception e){
 			e.printStackTrace();
 		}

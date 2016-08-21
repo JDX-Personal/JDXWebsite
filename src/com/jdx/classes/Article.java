@@ -1,29 +1,36 @@
 package com.jdx.classes;
 
-import java.io.Serializable;
+
 import java.util.Date;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-import org.hibernate.annotations.DynamicUpdate;
-import org.hibernate.annotations.Entity;
 import org.hibernate.annotations.Table;
 
 
-@DynamicUpdate
-//@Table(name="article", appliesTo = "")
-public class Article implements Serializable{
+@Entity()
+@Table(appliesTo = "article")
+public class Article{
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = 1L;
-	@Id @GeneratedValue
+	@Id 
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "ArticleId")
 	public int id;
+	@Column(name = "PageName")
 	public String pageName;
+	@Column(name = "Title")
 	public String title;
+	@Column(name = "Overview")
 	public String overview;
+	@Column(name = "CreatedDate")
 	public Date createdDate;
+	@Column(name = "LasteUpdated")
 	public Date lastUpdated;
 	
 	public Article(){}

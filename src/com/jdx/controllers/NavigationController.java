@@ -28,6 +28,7 @@ public class NavigationController extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// This controls which page the user will be forwarded too
+		//Test
 		String action = request.getParameter("action");	
 		System.out.println("action = " + action);
 		String page = "/";
